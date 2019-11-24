@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "847654714840",
+    "firebase_url": "https://meetshop-f0fae.firebaseio.com",
+    "project_id": "meetshop-f0fae",
+    "storage_bucket": "meetshop-f0fae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847654714840:android:530f6e0c221e85baa086ad",
+        "android_client_info": {
+          "package_name": "meatshop.com.tullahnazari.meatshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847654714840-5cbj2f2mk1bulj3lnut458d02qnlato1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "meatshop.com.tullahnazari.meatshop",
+            "certificate_hash": "38a397004d2d6fc0b27f4123ec210264b35511a3"
+          }
+        },
+        {
+          "client_id": "847654714840-qf625vu6v028jm76ar46bhb6t5eat83q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaw2hfS75jugUM9PoqNL51QeMkuIqeV5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847654714840-qf625vu6v028jm76ar46bhb6t5eat83q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "847654714840-bm205fub5pmtj589lp2pj3gef2m31hkh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "meatshop.com.tullahnazari.meatshop"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
