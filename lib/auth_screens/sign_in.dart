@@ -25,11 +25,11 @@ class _SignInState extends State<SignIn> {
     return loading
         ? Loading()
         : Scaffold(
-            backgroundColor: Colors.brown[100],
+            backgroundColor: Theme.of(context).accentColor,
             appBar: AppBar(
-              backgroundColor: Colors.brown[400],
+              backgroundColor: Theme.of(context).primaryColorDark,
               elevation: 0.0,
-              title: Text('Sign in to Brew Crew'),
+              title: Text('Welcome to MeetShop!'),
               actions: <Widget>[
                 FlatButton.icon(
                     onPressed: () {
@@ -67,39 +67,44 @@ class _SignInState extends State<SignIn> {
                       },
                     ),
                     SizedBox(height: 20),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        RaisedButton(
-                          color: Colors.blueGrey,
-                          child: Text(
-                            'Sign in',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          onPressed: () async {
-                            if (_formKey.currentState.validate()) {
-                              setState(() => loading = true);
-                              dynamic result = await _auth
-                                  .signInWithEmailAndPassword(email, password);
-                              if (result == null) {
-                                setState(() {
-                                  error =
-                                      'Couldn\'t sign in with your credentials';
-                                  loading = false;
-                                });
-                              }
+                    SizedBox(
+                      height: 60,
+                      width: double.infinity,
+                      child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(18.0),
+                            side: BorderSide(
+                                color: Theme.of(context).primaryColorDark)),
+                        color: Colors.blueGrey,
+                        child: Text(
+                          'Sign in',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        onPressed: () async {
+                          if (_formKey.currentState.validate()) {
+                            setState(() => loading = true);
+                            dynamic result = await _auth
+                                .signInWithEmailAndPassword(email, password);
+                            if (result == null) {
+                              setState(() {
+                                error =
+                                    'Couldn\'t sign in with your credentials';
+                                loading = false;
+                              });
                             }
-                          },
-                        ),
-                        SizedBox(
-                          height: 12,
-                        ),
-                        Text(
-                          error,
-                          style:
-                              TextStyle(color: Colors.redAccent, fontSize: 14),
-                        ),
-                      ],
+                          }
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Text(
+                      error,
+                      style: TextStyle(color: Colors.redAccent, fontSize: 14),
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                   ],
                 ),

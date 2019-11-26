@@ -1,0 +1,10 @@
+
+class MeatCategory{
+
+  final String meatName;
+  final Image meatImage;
+
+
+  MeatCategory({this.meatName, this.meatImage});
+
+}
